@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://BibWord.org/BibType" elementFormDefault="qualified" xmlns="http://BibWord.org/BibType" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+  <xsd:simpleType name="ST_String255">
+    <xsd:annotation>
+      <xsd:documentation>String Value</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="0" />
+      <xsd:maxLength value="255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="CT_DataTag">
+    <xsd:annotation>
+      <xsd:documentation>Data Tag for a Source Element.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="ST_String255">
+      <xsd:enumeration value="b:AbbreviatedCaseNumber"/>
+      <xsd:enumeration value="b:AlbumTitle"/>
+      <xsd:enumeration value="b:Author/b:Artist/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:Author/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:BookAuthor/b:NameList"/>
+      <xsd:enumeration value="b:BookTitle"/>
+      <xsd:enumeration value="b:Broadcaster"/>
+      <xsd:enumeration value="b:BroadcastTitle"/>
+      <xsd:enumeration value="b:CaseNumber"/>
+      <xsd:enumeration value="b:ChapterNumber"/>
+      <xsd:enumeration value="b:City"/>
+      <xsd:enumeration value="b:Comments"/>
+      <xsd:enumeration value="b:Author/b:Compiler/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:Composer/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:Conductor/b:NameList"/>
+      <xsd:enumeration value="b:ConferenceName"/>
+      <xsd:enumeration value="b:Author/b:Counsel/b:NameList"/>
+      <xsd:enumeration value="b:CountryRegion"/>
+      <xsd:enumeration value="b:Court"/>
+      <xsd:enumeration value="b:Day"/>
+      <xsd:enumeration value="b:DayAccessed"/>
+      <xsd:enumeration value="b:Department"/>
+      <xsd:enumeration value="b:Author/b:Director/b:NameList"/>
+      <xsd:enumeration value="b:Distributor"/>
+      <xsd:enumeration value="b:Edition"/>
+      <xsd:enumeration value="b:Author/b:Editor/b:NameList"/>
+      <xsd:enumeration value="b:Institution"/>
+      <xsd:enumeration value="b:InternetSiteTitle"/>
+      <xsd:enumeration value="b:Author/b:Interviewee/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:Interviewer/b:NameList"/>
+      <xsd:enumeration value="b:Author/b:Inventor/b:NameList"/>
+      <xsd:enumeration value="b:Issue"/>
+      <xsd:enumeration value="b:JournalName"/>
+      <xsd:enumeration value="b:Medium"/>
+      <xsd:enumeration value="b:Month"/>
+      <xsd:enumeration value="b:MonthAccessed"/>
+      <xsd:enumeration value="b:NumberVolumes"/>
+      <xsd:enumeration value="b:Pages"/>
+      <xsd:enumeration value="b:PatentNumber"/>
+      <xsd:enumeration value="b:Author/b:Performer/b:NameList"/>
+      <xsd:enumeration value="b:PeriodicalTitle"/>
+      <xsd:enumeration value="b:Author/b:ProducerName/b:NameList"/>
+      <xsd:enumeration value="b:ProductionCompany"/>
+      <xsd:enumeration value="b:PublicationTitle"/>
+      <xsd:enumeration value="b:Publisher"/>
+      <xsd:enumeration value="b:Reporter"/>
+      <xsd:enumeration value="b:ShortTitle"/>
+      <xsd:enumeration value="b:StandardNumber"/>
+      <xsd:enumeration value="b:StateProvince"/>
+      <xsd:enumeration value="b:Station"/>
+      <xsd:enumeration value="b:Theater"/>
+      <xsd:enumeration value="b:ThesisType"/>
+      <xsd:enumeration value="b:Title"/>
+      <xsd:enumeration value="b:Author/b:Translator/b:NameList"/>
+      <xsd:enumeration value="b:Type"/>
+      <xsd:enumeration value="b:URL"/>
+      <xsd:enumeration value="b:Version"/>
+      <xsd:enumeration value="b:Volume"/>
+      <xsd:enumeration value="b:Author/b:Writer/b:NameList"/>
+      <xsd:enumeration value="b:Year"/>
+      <xsd:enumeration value="b:YearAccessed"/>
+      <!--<xsd:enumeration value="b:GUID"/>-->
+      <!--<xsd:enumeration value="b:LCID"/>-->
+      <!--<xsd:enumeration value="b:RefOrder"/>-->
+      <!--<xsd:enumeration value="b:Tag"/>-->
+    </xsd:restriction>
+    
+  </xsd:simpleType>
+  
+  <xsd:complexType name="CT_Type">
+    <xsd:sequence>
+      <xsd:element name="DataTag" type="CT_DataTag" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Data Tag for a Source Element</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="Name" type="ST_String255" use="required">
+      <xsd:annotation>
+        <xsd:documentation>Generic Name of the Type of Source</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="Display" type="ST_String255" use="optional">
+      <xsd:annotation>
+        <xsd:documentation>Culture Specific Name of the Type of Source</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>    
+  </xsd:complexType>
+
+  <xsd:complexType name="CT_Types">
+    <xsd:sequence>
+      <xsd:element name="Type" type="CT_Type" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>A Type of Source</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:element name="Types" type="CT_Types">
+    <xsd:annotation>
+      <xsd:documentation>Bibliographic Types</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  
+</xsd:schema>
