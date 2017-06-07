@@ -7,7 +7,23 @@ Microsoft Word and Bibliography Styles with slight modifications to better suppo
 ## Installation
 ### Windows
 #### Word 2007
->  <winword.exe directory>\Bibliography\Style
+> <winword.exe directory>\Bibliography\Style
+
+#### Word 2010
+> <winword.exe directory>\Bibliography\Style
+
+#### Word 2010 (32 bit systems)
+> %programfiles%\Microsoft Office\Office14\Bibliography\Style
+
+### Mac OS
+#### Word 2008 and Word 2011
+To use the bibliography styles, right-click on Microsoft Word 2008 and select show package contents. Put the files in:
+> Contents/Resources/Style/
+On most Macs with Microsoft Word 2008 this will be:
+>  /Applications/Microsoft Office 2008/Microsoft Word.app/Contents/Resources/Style/
+#### Word 2016 for Mac (version 15.17.0 and up)
+To use the bibliography styles, place them in the following folder
+> /Library/AppSupport/Microsoft/Office365/Citations/
 
 ## FAQ 
 ### Why is a new style not showing up in Word when I add it to the Style directory?
