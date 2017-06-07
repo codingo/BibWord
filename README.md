@@ -1,5 +1,5 @@
-# Credit
-This work is only made possible by the original work of Yves Dhondt (yves.dhondt@gmail.com) and his original project, found at https://bibword.codeplex.com/.
+# Credit / Foreward
+This work is only made possible by the original work of Yves Dhondt (yves.dhondt@gmail.com) and his original project, found at https://bibword.codeplex.com/. I have created this project to preserve this work as it will otherwise disappear with the closure of CodePlex and I found it invaluable in my own studies. I will aim to keep this up to date (feel free to raise issues) however should the original project be migrated to another source I will be closing this in favor of one maintained by its original author.
 
 # BibWord
 Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
