@@ -161,7 +161,7 @@ No. You probably made a mistake when entering the different author names. You sh
 
 If you really want to enter them as a string, then be aware that the correct format is "Last1, First1 Middle1; Last2, First2 Middle2; ...". So the names are separated by a ";" while name parts are separated by a ",".
 
-Note that there is a bug in Word where sometimes the name conversion goes wrong. For more info, see here.
+Note that there is a bug in Word where sometimes the name conversion goes wrong.
 
 
 ### When using a numbered style (e.g. IEEE), the number is wrapped over multiple lines. Is this a bug?
