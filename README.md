@@ -16,7 +16,7 @@ To use the bibliography styles, they have to be copied into the Microsoft Word b
 #### Word 2010 (32 bit systems)
 > %programfiles%\Microsoft Office\Office14\Bibliography\Style
 #### Word 2016 (Office 365)
-> C:\Users\\<currentusername>\AppData\Roaming\Microsoft\Bibliography\Style
+> C:\Users\<currentusername>\AppData\Roaming\Microsoft\Bibliography\Style
 
 ### Mac OS
 #### Word 2008 and Word 2011
