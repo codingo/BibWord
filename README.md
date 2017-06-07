@@ -5,7 +5,10 @@ This work is only made possible by the original work of Yves Dhondt (yves.dhondt
 Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
 
 ## Installation
-To use the bibliography styles, they have to be copied into the Microsoft Word bibliography style directory. This directory can vary depending on where Word is installed. Once the styles are copied to the directory, they will show up every time Microsoft Word is opened. Locations where files should be installed are as follows:
+To use the bibliography styles, they have to be copied into the Microsoft Word bibliography style directory. This directory can vary depending on where Word is installed. Once the styles are copied to the directory, they will show up every time Microsoft Word is opened.
+
+It should be noted that on a 64 bit machine you have "Program Files" and "Program Files (x86)". For the majority of cases the style folder will be located within _Program Files x86_. Locations where files should then be installed are as follows:
+
 ### Windows
 #### Word 2007
 > <winword.exe directory>\Bibliography\Style
