@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://BibWord.org/BibType">
+  <Type Name="Book">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:NumberVolumes</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:Edition</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="BookSection">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Author/b:BookAuthor/b:NameList</DataTag>
+    <DataTag>b:BookTitle</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:NumberVolumes</DataTag>
+    <DataTag>b:ChapterNumber</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Edition</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="JournalArticle">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:JournalName</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:Issue</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="ArticleInAPeriodical">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:PeriodicalTitle</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Edition</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:Issue</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="ConferenceProceedings">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:ConferenceName</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Report">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Department</DataTag>
+    <DataTag>b:Institution</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:ThesisType</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="InternetSite">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:InternetSiteTitle</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:Version</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="DocumentFromInternetSite">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:InternetSiteTitle</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:Version</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="ElectronicSource">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:PublicationTitle</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Edition</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Art">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Artist/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Institution</DataTag>
+    <DataTag>b:PublicationTitle</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:URL</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <!-- End extra tags. -->    
+  </Type>
+  <Type Name="SoundRecording">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Composer/b:NameList</DataTag>
+    <DataTag>b:Author/b:Conductor/b:NameList</DataTag>
+    <DataTag>b:Author/b:Performer/b:NameList</DataTag>
+    <DataTag>b:Author/b:Artist/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:AlbumTitle</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:RecordingNumber</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Performance">
+    <!-- Begin original tags. -->
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Author/b:Writer/b:NameList</DataTag>
+    <DataTag>b:Author/b:Performer/b:NameList</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Author/b:Director/b:NameList</DataTag>
+    <DataTag>b:Theater</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:YearAccessed</DataTag>
+    <DataTag>b:MonthAccessed</DataTag>
+    <DataTag>b:DayAccessed</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Film">
+    <!-- Begin original tags. -->
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Author/b:Performer/b:NameList</DataTag>
+    <DataTag>b:Author/b:ProducerName/b:NameList</DataTag>
+    <DataTag>b:ProductionCompany</DataTag>
+    <DataTag>b:Author/b:Director/b:NameList</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Distributor</DataTag>
+    <DataTag>b:Author/b:Writer/b:NameList</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:City</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Interview">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Interviewee/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:BroadcastTitle</DataTag>
+    <DataTag>b:Author/b:Interviewer/b:NameList</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Broadcaster</DataTag>
+    <DataTag>b:Station</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:Author/b:Compiler/b:NameList</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Patent">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Inventor/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <DataTag>b:PatentNumber</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Case">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:CaseNumber</DataTag>
+    <DataTag>b:Reporter</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:Court</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:Author/b:Counsel/b:NameList</DataTag>
+    <DataTag>b:AbbreviatedCaseNumber</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <!-- End extra tags. -->
+  </Type>
+  <Type Name="Misc">
+    <!-- Begin original tags. -->
+    <DataTag>b:Author/b:Author/b:NameList</DataTag>
+    <DataTag>b:Title</DataTag>
+    <DataTag>b:PublicationTitle</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <DataTag>b:Year</DataTag>
+    <DataTag>b:Month</DataTag>
+    <DataTag>b:Day</DataTag>
+    <DataTag>b:City</DataTag>
+    <DataTag>b:StateProvince</DataTag>
+    <DataTag>b:CountryRegion</DataTag>
+    <DataTag>b:Publisher</DataTag>
+    <DataTag>b:Author/b:Editor/b:NameList</DataTag>
+    <DataTag>b:Pages</DataTag>
+    <DataTag>b:Volume</DataTag>
+    <DataTag>b:Edition</DataTag>
+    <DataTag>b:Issue</DataTag>
+    <DataTag>b:Author/b:Translator/b:NameList</DataTag>
+    <DataTag>b:Author/b:Compiler/b:NameList</DataTag>
+    <DataTag>b:ShortTitle</DataTag>
+    <DataTag>b:StandardNumber</DataTag>
+    <DataTag>b:Comments</DataTag>
+    <!-- End original tags. -->
+    <!-- Begin extra tags. -->
+    <DataTag>b:Type</DataTag>
+    <DataTag>b:Medium</DataTag>
+    <!-- End extra tags. -->
+  </Type>  
+</Types>
