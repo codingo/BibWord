@@ -1,48 +1,46 @@
-# BibWord
-Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
-
 # Credit
 This work is only made possible by the original work of Yves Dhondt (yves.dhondt@gmail.com) and his original project, found at https://bibword.codeplex.com/.
 
-# FAQ 
-## Why is a new style not showing up in Word when I add it to the Style directory?
+# BibWord
+Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
 
-***Answer:*** The list of available reference styles gets loaded only once. So when you add a new style to the style directory, you need to restart Word.
-
-
-## In Word 2008, new styles are only added for citations. How can I use the new styles for bibliographies?
-
-***Answer:*** Add the bibliography using one of the four predefined styles. Then go to the citation toolbox and select the style you want. This will update all the citations and bibliographies in your text to the new style.
+## FAQ 
+### Why is a new style not showing up in Word when I add it to the Style directory?
+The list of available reference styles gets loaded only once. So when you add a new style to the style directory, you need to restart Word.
 
 
-## Why does it take Word so long to show the dropdown list with style names the first time?
-***Answer:*** Word has to retrieve the style names of every XSL in the style directory the first time. Hence, the more styles you put in the directory, the more time Word needs to fill the drop down list.
+### In Word 2008, new styles are only added for citations. How can I use the new styles for bibliographies?
+Add the bibliography using one of the four predefined styles. Then go to the citation toolbox and select the style you want. This will update all the citations and bibliographies in your text to the new style.
 
 
-## Why do I get 'BO' instead of a number when using certain styles?
-***Answer:*** 'BO' is often printed when the BibOrder number is not available. Use the BibWord Extender tool on the document to add the missing numbers.
+### Why does it take Word so long to show the dropdown list with style names the first time?
+Word has to retrieve the style names of every XSL in the style directory the first time. Hence, the more styles you put in the directory, the more time Word needs to fill the drop down list.
 
 
-## Why do certain styles have a * at the end of their name?
-***Answer:*** Although the usage of a * is not mandatory, it often indicates that part of the functionality of the style can only be used in combination with the BibWord Extender tool.
+### Why do I get 'BO' instead of a number when using certain styles?
+'BO' is often printed when the BibOrder number is not available. Use the BibWord Extender tool on the document to add the missing numbers.
 
 
-## Can I request to get a certain style?
-***Answer:*** No. Using BibWord, you really should try to create the style yourself. Keep in mind that even if you find someone prepared to create the style for you that you will have to provide him/her with detailed information about the formatting guidelines for your style. Messages containing "I need style x." will most likely be ignored.
+### Why do certain styles have a * at the end of their name?
+Although the usage of a * is not mandatory, it often indicates that part of the functionality of the style can only be used in combination with the BibWord Extender tool.
 
 
-## Can I (not) link my in-text citations to their bibliography entries?
-***Answer:*** Yes. Set the value of citation_as_link to 'yes' if you want in-text citations to link to their specific bibliography entry, or to any other value if you do not.
+### Can I request to get a certain style?
+No. Using BibWord, you really should try to create the style yourself. Keep in mind that even if you find someone prepared to create the style for you that you will have to provide him/her with detailed information about the formatting guidelines for your style. Messages containing "I need style x." will most likely be ignored.
 
 
-## Can I change the surrounding brackets for in-text citations?
-***Answer:*** Yes. You can change the surrounding brackets by changing the values of openbracket and closebracket
+### Can I (not) link my in-text citations to their bibliography entries?
+Yes. Set the value of citation_as_link to 'yes' if you want in-text citations to link to their specific bibliography entry, or to any other value if you do not.
+
+
+### Can I change the surrounding brackets for in-text citations?
+Yes. You can change the surrounding brackets by changing the values of openbracket and closebracket
 ```
 <openbracket>(</openbracket>
 <closebracket>)</closebracket>
 ```
-## How do I get my in-text citations in superscript?
-***Answer:*** In-text citations inherit the style of their surroundings. Only limited formatting (bold, underline, italic) can be applied to them through the reference style. For any further formatting, such as superscript, a character style has to be applied to all CITATION fields.
+### How do I get my in-text citations in superscript?
+In-text citations inherit the style of their surroundings. Only limited formatting (bold, underline, italic) can be applied to them through the reference style. For any further formatting, such as superscript, a character style has to be applied to all CITATION fields.
 
 The following macro creates a character style called In-Text Citation if it does not yet exist. When the style is newly created, it sets the font to superscript. Then the style is applied to all CITATION fields in the document. By changing/updating the style In-Text Citation you can then update the formatting of all citations
 ```
@@ -84,8 +82,8 @@ Sub ApplyCitationStyle()
 
 End Sub
 ```
-## How do I convert all my in-text citations to static text in one go?
-***Answer:*** You can use the following macro to convert all in-text citations:
+### How do I convert all my in-text citations to static text in one go?
+You can use the following macro to convert all in-text citations:
 ```
 Sub CitationsToStaticText()
     Dim fld As Field
@@ -103,8 +101,8 @@ Sub CitationsToStaticText()
 
 End Sub
 ```
-## Is there an easy way to get rid of sources which are not cited in the text?
-***Answer:*** You can use the following macro to remove all uncited sources from a document:
+### Is there an easy way to get rid of sources which are not cited in the text?
+You can use the following macro to remove all uncited sources from a document:
 ```
 Sub RemoveUnusedCitations()
     ' Get the number of sources.
@@ -119,39 +117,39 @@ Sub RemoveUnusedCitations()
     Loop
 End Sub
 ```
-## How do I set the indentation of my bibliography?
-***Answer:*** Add a bibliography to your document. Open the 'Styles' pane (CTRL+ALT+SHIFT+S) and look for a style called 'Bibliography' (or a localized translation of the word 'Bibliography'). Change the indentation settings there. That way, whenever your bibliography gets updated, the indentation will remain correct.
+### How do I set the indentation of my bibliography?
+Add a bibliography to your document. Open the 'Styles' pane (CTRL+ALT+SHIFT+S) and look for a style called 'Bibliography' (or a localized translation of the word 'Bibliography'). Change the indentation settings there. That way, whenever your bibliography gets updated, the indentation will remain correct.
 
 
-## Is it possible to group several citations? Currently I have something like (1)(2) and I want (1,2).
-***Answer:*** Yes. You can add a second source to a citation by using the '\m' switch and the tag of the source you want to add. In Word 2007, if you want to add a source with tag 'Bee99' to an existing citation, right click the citation and select 'Edit Field...'. It will show you something like 'CITATION Gup97 \l 2060'. To add the extra source, change it to 'CITATION Gup97 \l 2060 \m Bee99'. For more information, also see the Microsoft Office online help topic on the CITATION field code.
+### Is it possible to group several citations? Currently I have something like (1)(2) and I want (1,2).
+Yes. You can add a second source to a citation by using the '\m' switch and the tag of the source you want to add. In Word 2007, if you want to add a source with tag 'Bee99' to an existing citation, right click the citation and select 'Edit Field...'. It will show you something like 'CITATION Gup97 \l 2060'. To add the extra source, change it to 'CITATION Gup97 \l 2060 \m Bee99'. For more information, also see the Microsoft Office online help topic on the CITATION field code.
 
 Alternatively, you can put your cursor inside any in-text citation, then go to 'References' tab in the ribbon and click 'Insert Citation'.
 
 To change the separator between two grouped in-text citations, BibWord uses the separator element.
 
 
-## Only the name of the first author is displayed correctly, all other author names are abbreviated. Is this a bug?
-***Answer:*** No. You probably made a mistake when entering the different author names. You should enter them one by one in the dialog that comes up when clicking the "Edit..." button next to the author field. That way you will not make a mistake.
+### Only the name of the first author is displayed correctly, all other author names are abbreviated. Is this a bug?
+No. You probably made a mistake when entering the different author names. You should enter them one by one in the dialog that comes up when clicking the "Edit..." button next to the author field. That way you will not make a mistake.
 
 If you really want to enter them as a string, then be aware that the correct format is "Last1, First1 Middle1; Last2, First2 Middle2; ...". So the names are separated by a ";" while name parts are separated by a ",".
 
 Note that there is a bug in Word where sometimes the name conversion goes wrong. For more info, see here.
 
 
-## When using a numbered style (e.g. IEEE), the number is wrapped over multiple lines. Is this a bug?
-***Answer:*** No. Numbered styles are mostly represented using a 2 column table where the first column contains the number and the second column contains the text. The text wrap you see is caused by the first column not being wide enough. You can simple solve this by positioning your cursor on the the table border between the first and second column and drag it to the right.
+### When using a numbered style (e.g. IEEE), the number is wrapped over multiple lines. Is this a bug?
+No. Numbered styles are mostly represented using a 2 column table where the first column contains the number and the second column contains the text. The text wrap you see is caused by the first column not being wide enough. You can simple solve this by positioning your cursor on the the table border between the first and second column and drag it to the right.
 
 This can also be used to add extra white space after the number if you set the halign element to left of the first column.
 
 
-## My in-text citations are displayed in bold. How do I change this?
-***Answer:*** If you link your in-text citation to your bibliography, Word formats the link using the 'Heading 2 Character style'. So if that style is configured to use bold, so will the in-text citation. Assuming you cannot or do not want to change that style, there are two possible solutions:
+### My in-text citations are displayed in bold. How do I change this?
+If you link your in-text citation to your bibliography, Word formats the link using the 'Heading 2 Character style'. So if that style is configured to use bold, so will the in-text citation. Assuming you cannot or do not want to change that style, there are two possible solutions:
 
-### Disable linking between in-text citations and bibliographies. 
+#### Disable linking between in-text citations and bibliographies. 
 This can be done easily be setting the value of citation_as_link to 'no' in the xsl file.
 
-### Format each in-text citation with another character style. 
+#### Format each in-text citation with another character style. 
 This way you will be able to keep using the links between in-text citations and bibliographies. To ease this job, you could use the following macro which you can run every time you insert an in-text citation or once at the end.
 ```
 Sub ApplyCitationStyle()
