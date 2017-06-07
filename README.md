@@ -4,6 +4,11 @@ This work is only made possible by the original work of Yves Dhondt (yves.dhondt
 # BibWord
 Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
 
+## Installation
+### Windows
+#### Word 2007
+>  <winword.exe directory>\Bibliography\Style
+
 ## FAQ 
 ### Why is a new style not showing up in Word when I add it to the Style directory?
 The list of available reference styles gets loaded only once. So when you add a new style to the style directory, you need to restart Word.
