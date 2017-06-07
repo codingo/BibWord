@@ -1,8 +1,7 @@
+![Microsoft Word Citation and Bibliography Styles](https://github.com/codingo/BibWord/blob/master/BibWord.png "BibWord")
+
 # Credit / Foreward
 This work is only made possible by the original work of Yves Dhondt (yves.dhondt@gmail.com) and his original project, found at https://bibword.codeplex.com/. I have created this project to preserve this work as it will otherwise disappear with the closure of CodePlex and I found it invaluable in my own studies. I will aim to keep this up to date (feel free to raise issues) however should the original project be migrated to another source I will be closing this in favor of one maintained by its original author.
-
-# BibWord
-Microsoft Word and Bibliography Styles with slight modifications to better support USQ Business School's AGPS format as well as migration to Office 365. This project was largely created to preserve this work with the decomissioning of CodePlex and no other project of this nature currently being made available in the public domain.
 
 ## Installation
 To use the bibliography styles, they have to be copied into the Microsoft Word bibliography style directory. This directory can vary depending on where Word is installed. Once the styles are copied to the directory, they will show up every time Microsoft Word is opened.
