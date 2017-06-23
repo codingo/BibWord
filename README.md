@@ -19,6 +19,8 @@ It should be noted that on a 64 bit machine you have "Program Files" and "Progra
 > %programfiles%\Microsoft Office\Office14\Bibliography\Style
 #### Word 2016 (Office 365)
 > C:\Users\<currentusername>\AppData\Roaming\Microsoft\Bibliography\Style
+or 
+> %AppData%\Microsoft\Templates\LiveContent\15\Managed\Word Document Bibliography Styles
 
 ### Mac OS
 #### Word 2008 and Word 2011
