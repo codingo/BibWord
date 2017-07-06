@@ -33,7 +33,8 @@ To use the bibliography styles, place them in the following folder
 > /Library/AppSupport/Microsoft/Office365/Citations/
 More information can be found here: https://msdn.microsoft.com/VBA/Word-VBA/articles/create-custom-bibliography-styles?f=255&MSPPError=-2147217396
 
-Alternatively these may need to be placed within the application at
+#### Office 365
+For the latest releases of Office 365 these need to be placed within the application at:
 
 > /Applications/Microsoft Word.app/Contents/Resources/Style
 
