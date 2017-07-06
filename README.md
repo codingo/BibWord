@@ -31,6 +31,7 @@ On most Macs with Microsoft Word 2008 this will be:
 #### Word 2016 for Mac (version 15.17.0 and up)
 To use the bibliography styles, place them in the following folder
 > /Library/AppSupport/Microsoft/Office365/Citations/
+More information can be found here: https://msdn.microsoft.com/VBA/Word-VBA/articles/create-custom-bibliography-styles?f=255&MSPPError=-2147217396
 
 ## FAQ 
 ### Why is a new style not showing up in Word when I add it to the Style directory?
