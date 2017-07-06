@@ -33,6 +33,12 @@ To use the bibliography styles, place them in the following folder
 > /Library/AppSupport/Microsoft/Office365/Citations/
 More information can be found here: https://msdn.microsoft.com/VBA/Word-VBA/articles/create-custom-bibliography-styles?f=255&MSPPError=-2147217396
 
+Alternatively these may need to be placed within the application at
+
+> /Applications/Microsoft Word.app/Contents/Resources/Style
+
+To do this, open Finder, right click on /Application/Microsoft Word (or /Application/Microsoft Word.app - depending on your Finder Preferences), then click Show Package Contents to see the folders within the .app file.
+
 ## FAQ 
 ### Why is a new style not showing up in Word when I add it to the Style directory?
 The list of available reference styles gets loaded only once. So when you add a new style to the style directory, you need to restart Word.
