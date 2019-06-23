@@ -72,6 +72,7 @@
         <b:ImportantField>b:Issue</b:ImportantField>
         <b:ImportantField>b:Month</b:ImportantField>
         <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Pages</b:ImportantField>
       </source>
       <source type="ArticleInAPeriodical">
         <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
@@ -224,7 +225,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%Title%. }{%JournalName%. }{%Year%{ %Month:s%{ %Day%}}};{ %Volume%}{(%Issue%)}{: %Pages:p. :p. %}.</format>
+          <format>{%Author:1%. }{%Title%. }{%JournalName%. }{%Year%{ %Month:s%{ %Day%}}};{ %Volume%}{(%Issue%)}{: %Pages: : %}.</format>
         </column>
         <sortkey></sortkey>
       </source>
