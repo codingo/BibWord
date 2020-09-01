@@ -6,6 +6,8 @@
 This work is only made possible by the original work of Yves Dhondt (yves.dhondt@gmail.com) and his original project, found at https://bibword.codeplex.com/. I have created this project to preserve this work as it will otherwise disappear with the closure of CodePlex and I found it invaluable in my own studies. I will aim to keep this up to date (feel free to raise issues) however should the original project be migrated to another source I will be closing this in favor of one maintained by its original author.
 
 ## Installation
+To get the style files find the desired file using the above links. Once found, look for a button labelled "Raw". Either right-click this button and select "save linked content as" or, or click the button and right-click to save-as. Note that once downloaded, ensure that the filename extension is `.xsl`, some browsers will append `.txt`. Windows, by default hides file extensions.
+
 To use the bibliography styles, they have to be copied into the Microsoft Word bibliography style directory. This directory can vary depending on where Word is installed. Once the styles are copied to the directory, they will show up every time Microsoft Word is opened.
 
 It should be noted that on a 64 bit machine you have "Program Files" and "Program Files (x86)". For the majority of cases the style folder will be located within _Program Files x86_. Locations where files should then be installed are as follows:
