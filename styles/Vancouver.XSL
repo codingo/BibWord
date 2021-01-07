@@ -919,7 +919,7 @@
     <xsl:param name="bibNodeSet"/>
 
     <!-- Empty paragraph hack for table. -->
-    <p class="MsoBibliography" style="display:none;">x</p>
+    <p class="MsoBibliography" style="display:none;"></p>
 
     <table width="100%">
       <xsl:for-each select="$bibNodeSet/b:Bibliography/b:Source">
@@ -936,7 +936,7 @@
     </table>
 
     <!-- Empty paragraph hack for table. -->
-    <p class="MsoBibliography" style="display:none;">x</p>
+    <p class="MsoBibliography" style="display:none;"></p>
 
   </xsl:template>
 
