@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- 
+      PASTE ON %AppData%\Microsoft\Bibliography\Style
+
      Stylesheet for Microsoft Word 2007/2008/2010 Bibliography formatting.
      
      Author(s): Yves Dhondt (yves.dhondt@gmail.com)
@@ -34,168 +36,463 @@
   <!-- Variable containing all necessary data for a certain style of bibliography. -->
   <xsl:variable name="data">
     <general>
-      <stylename>ABNT NBR 6023:2002*</stylename>
-      <version>2009.05.23</version>
-      <author>Yves Dhondt (yves.dhondt@gmail.com)</author>
-      <description>An implementation of the ABNT NBR 6023/2002 style.</description>
+      <stylename>ABNT NBR 6023</stylename>
+      <version>2018</version>
+      <author>César Eduardo Petersen (cesar.e.p@hotmail.com)</author>
+      <description>Implementação da formatação da ABNT</description>
       <URL>http://bibliography.codeplex.com/updateStyle?id=ABNT1</URL>
       <comments>
+        Original desenvolvido por Yves Dhondt (yves.dhondt@gmail.com)
       </comments>
       <display_errors>yes</display_errors>
       <citation_as_link>no</citation_as_link>
-    </general>
+    </general>    
+
     <importantfields>
-      <source type="ArticleInAPeriodical">
+    <source type="ArticleInAPeriodical">
         <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
         <b:ImportantField>b:Title</b:ImportantField>
         <b:ImportantField>b:PeriodicalTitle</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
-        <b:ImportantField>b:Day</b:ImportantField>
+        <!-- <b:ImportantField>b:City</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
         <b:ImportantField>b:Month</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:StandardNumber</b:ImportantField>
-      </source>
-      <source type="Book">
-        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:Edition</b:ImportantField>
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <b:ImportantField>b:Pages</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Edition</b:ImportantField> -->
         <b:ImportantField>b:Volume</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:Publisher</b:ImportantField>
-      </source>
-      <source type="BookSection">
-        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Author/b:BookAuthor/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:BookTitle</b:ImportantField>
-        <b:ImportantField>b:Edition</b:ImportantField>
-        <b:ImportantField>b:Volume</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:Publisher</b:ImportantField>
-        <b:ImportantField>b:ChapterNumber</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
-      </source>
-      <source type="ConferenceProceedings">
-        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:ConferenceName</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:Publisher</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
-      </source>
-      <source type="Film">
-        <b:ImportantField>b:Author/b:Director/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Author/b:Performer/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:ProductionCompany</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-      </source>
-      <source type="InternetSite">
-        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
-        <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:InternetSiteTitle</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:StandardNumber</b:ImportantField>
+        <b:ImportantField>b:Issue</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
         <b:ImportantField>b:URL</b:ImportantField>
         <b:ImportantField>b:DayAccessed</b:ImportantField>
         <b:ImportantField>b:MonthAccessed</b:ImportantField>
         <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:DOI</b:ImportantField>
+      </source>
+      <source type="Book">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Publisher</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <b:ImportantField>b:Volume</b:ImportantField>
+        <!-- <b:ImportantField>b:NumberVolumes</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Pages</b:ImportantField> -->
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+              </source>
+      <source type="BookSection">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Author/b:BookAuthor/b:NameList</b:ImportantField>
+        <b:ImportantField>b:BookTitle</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Pages</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Publisher</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <b:ImportantField>b:Volume</b:ImportantField>
+        <!-- <b:ImportantField>b:NumberVolumes</b:ImportantField> -->
+        <b:ImportantField>b:ChapterNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
       </source>
       <source type="JournalArticle">
         <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
         <b:ImportantField>b:Title</b:ImportantField>
         <b:ImportantField>b:JournalName</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Month</b:ImportantField>
+        <b:ImportantField>b:Day</b:ImportantField>
+        <b:ImportantField>b:Pages</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
         <b:ImportantField>b:Volume</b:ImportantField>
         <b:ImportantField>b:Issue</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
-        <b:ImportantField>b:Month</b:ImportantField>
-        <b:ImportantField>b:Year</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:StandardNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
       </source>
-      <source type="Patent">
-        <b:ImportantField>b:Author/b:Inventor/b:NameList</b:ImportantField>
+      <source type="ConferenceProceedings">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
         <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:PatentNumber</b:ImportantField>
-        <b:ImportantField>b:Day</b:ImportantField>
-        <b:ImportantField>b:Month</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <b:ImportantField>b:Pages</b:ImportantField>
         <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:ConferenceName</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:Publisher</b:ImportantField>
+        <b:ImportantField>b:Volume</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
       </source>
       <source type="Report">
         <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
         <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:Institution</b:ImportantField>
-        <b:ImportantField>b:Pages</b:ImportantField>
         <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Department</b:ImportantField> -->
+        <b:ImportantField>b:Institution</b:ImportantField>
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
         <b:ImportantField>b:City</b:ImportantField>
-        <b:ImportantField>b:StandardNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:Pages</b:ImportantField> -->
+        <b:ImportantField>b:ThesisType</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="InternetSite">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:InternetSiteTitle</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ProductionCompany</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <!-- <b:ImportantField>b:Version</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="DocumentFromInternetSite">
+        <!-- <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Title</b:ImportantField> -->
+        <!-- <b:ImportantField>b:InternetSiteTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ProductionCompany</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Year</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Version</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Comments</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="ElectronicSource">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:PublicationTitle</b:ImportantField>
+        <!-- <b:ImportantField>b:City</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ProductionCompany</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Compiler/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Volume</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Art">
+        <b:ImportantField>b:Author/b:Artist/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Institution</b:ImportantField>
+        <!-- <b:ImportantField>b:PublicationTitle</b:ImportantField> -->
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Pages</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <b:ImportantField>b:Medium</b:ImportantField>
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
       </source>
       <source type="SoundRecording">
         <b:ImportantField>b:Author/b:Composer/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Conductor/b:NameList</b:ImportantField>
         <b:ImportantField>b:Author/b:Performer/b:NameList</b:ImportantField>
-        <b:ImportantField>b:AlbumTitle</b:ImportantField>
+        <b:ImportantField>b:Author/b:Artist/b:NameList</b:ImportantField>
         <b:ImportantField>b:Title</b:ImportantField>
-        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:AlbumTitle</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField> -->
         <b:ImportantField>b:ProductionCompany</b:ImportantField>
         <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:RecordingNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Performance">
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Author/b:Writer/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Artist/b:NameList</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField> -->
+        <b:ImportantField>b:ProductionCompany</b:ImportantField>
+        <b:ImportantField>b:Author/b:Director/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Theater</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Film">
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Author/b:Performer/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:ProducerName/b:NameList</b:ImportantField>
+        <b:ImportantField>b:ProductionCompany</b:ImportantField>
+        <b:ImportantField>b:Author/b:Director/b:NameList</b:ImportantField>
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Distributor</b:ImportantField>
+        <b:ImportantField>b:Author/b:Writer/b:NameList</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Interview">
+        <b:ImportantField>b:Author/b:Interviewee/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:BroadcastTitle</b:ImportantField>
+        <b:ImportantField>b:Author/b:Interviewer/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Month</b:ImportantField>
+        <b:ImportantField>b:Day</b:ImportantField>
+        <!-- <b:ImportantField>b:Publisher</b:ImportantField> -->
+        <b:ImportantField>b:Broadcaster</b:ImportantField>
+        <b:ImportantField>b:Station</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Compiler/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Pages</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Patent">
+        <b:ImportantField>b:Author/b:Inventor/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Month</b:ImportantField>
+        <b:ImportantField>b:Day</b:ImportantField>
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Type</b:ImportantField>
+        <b:ImportantField>b:PatentNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Case">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:CaseNumber</b:ImportantField>
+        <!-- <b:ImportantField>b:Reporter</b:ImportantField> -->
+        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:Court</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Counsel/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:AbbreviatedCaseNumber</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
+      </source>
+      <source type="Misc">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:SourceType</b:ImportantField>
+        <!-- <b:ImportantField>b:Medium</b:ImportantField> -->
+        <b:ImportantField>b:Year</b:ImportantField>
+        <!-- <b:ImportantField>b:Month</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Day</b:ImportantField> -->
+        <b:ImportantField>b:City</b:ImportantField>
+        <!-- <b:ImportantField>b:StateProvince</b:ImportantField> -->
+        <!-- <b:ImportantField>b:CountryRegion</b:ImportantField> -->
+        <b:ImportantField>b:Publisher</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Editor/b:NameList</b:ImportantField> -->
+        <b:ImportantField>b:Pages</b:ImportantField>
+        <b:ImportantField>b:Volume</b:ImportantField>
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <b:ImportantField>b:Issue</b:ImportantField>
+        <!-- <b:ImportantField>b:Author/b:Translator/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:Author/b:Compiler/b:NameList</b:ImportantField> -->
+        <!-- <b:ImportantField>b:ShortTitle</b:ImportantField> -->
+        <!-- <b:ImportantField>b:StandardNumber</b:ImportantField> -->
+        <b:ImportantField>b:Comments</b:ImportantField>
+        <!-- <b:ImportantField>b:YearAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:MonthAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DayAccessed</b:ImportantField> -->
+        <!-- <b:ImportantField>b:URL</b:ImportantField> -->
+        <!-- <b:ImportantField>b:DOI</b:ImportantField> -->
       </source>
     </importantfields>
-    <citation>
 
+    <citation>
+      <openbracket>(</openbracket>
+      <closebracket>)</closebracket>
       <separator>; </separator>
-      <noauthor>-Artist-Author-BookAuthor-Compiler-Composer-Conductor-Counsel-Director-Editor-Interviewee-Interviewer-Inventor-Performer-ProducerName-Translator-Writer-</noauthor>
+      <noauthor>-Artist-Title-Author-BookAuthor-Compiler-Composer-Conductor-Counsel-Director-Editor-Interviewee-Interviewer-Inventor-Performer-ProducerName-Translator-Writer-</noauthor>
       <notitle>-Title-AlbumTitle-BookTitle-BroadcastTitle-InternetSiteTitle-PeriodicalTitle-PublicationTitle-ShortTitle-</notitle>
       <noyear>-Year-YearAccessed-"n.d."-</noyear>
       <source type="Placeholder">
         <format>[%Tag%]</format>
       </source>
       <source type="ArticleInAPeriodical">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="Book">
-        <format>{%CitationPrefix%}{%Author:1|Editor:1|Compiler:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|Editor:1|Compiler:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="BookSection">
-        <format>{%CitationPrefix%}{%Author:1|BookAuthor:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
-      </source>
-      <source type="ConferenceProceedings">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
-      </source>
-      <source type="Film">
-        <format>{%CitationPrefix%}{%Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
-      </source>
-      <source type="InternetSite">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|BookAuthor:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="JournalArticle">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
-      <source type="Patent">
-        <format>{%CitationPrefix%}{%Inventor:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+      <source type="ConferenceProceedings">
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="Report">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
+      </source>
+      <source type="InternetSite">
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
+      </source>
+      <source type="Art">
+        <format>{%CitationPrefix% }{%Artist:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
+      </source>
+      <source type="Film">
+        <format>{%CitationPrefix% }{%Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
+      </source>
+      <source type="Patent">
+        <format>{%CitationPrefix% }{%Inventor:1%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="SoundRecording">
-        <format>{%CitationPrefix%}{%Composer:1|Performer:1|Title|AlbumTitle%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix%}{%Composer:1|Performer:1|Title|AlbumTitle%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
       <source type="Standard">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
-      </source>
-      <source type="Thesis">
-        <format>{%CitationPrefix%}{%Author:1|Title%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{%CitationSuffix%}</format>
+        <format>{%CitationPrefix% }{%Author:1|Title:F%}{, %Year%}{%YearSuffix%}{, %CitationPages:p. :p. %}{, v. %CitationVolume%}{, %CitationSuffix%}</format>
       </source>
     </citation>
+
     <bibliography>
       <columns>1</columns>
       <source type="Placeholder">
@@ -206,19 +503,12 @@
         </column>
         <sortkey>%Tag%</sortkey>
       </source>
-      <source type="ArticleInAPeriodical">
-        <column id="1">
-          <halign>left</halign>
-          <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%PeriodicalTitle%&lt;/b&gt;}{, %City%}{, %Volume%}{, n. %Issue%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ %Pages::%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
-        </column>
-        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
-      </source>
+      
       <source type="Book">
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Editor:3|Compiler:6|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ %Pages::% p.}.{ ISBN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:8|Editor:3|Compiler:6|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ {%City|"[S.l.]"%: }%Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ %Pages::% p.}{ ISBN %StandardNumber%.}{ DOI: %DOI:l%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Editor:3|Compiler:6|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -226,18 +516,60 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|BookAuthor:2|Title:f%.}{ %Title%.}{ In: {%BookAuthor:4|Editor:4|"______"%} &lt;b&gt;%BookTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %BookTitle:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ Cap. %ChapterNumber%,}{ %Pages:p. :p. %}.{ ISBN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:8|BookAuthor:2|Title:f%.}{ %Title%.}{ &lt;i&gt;In:&lt;/i&gt; {%BookAuthor:4|Editor:4|"______"%} &lt;b&gt;%BookTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %BookTitle:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ %Year%{%YearSuffix%}.}{ v. %Volume%,}{ cap. %ChapterNumber%,}{ %Pages:p. :p. %}.{ ISBN %StandardNumber%.}{ DOI: %DOI:l%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|BookAuthor:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
+      </source>
+      <source type="JournalArticle">
+        <column id="1">
+          <halign>left</halign>
+          <valign>top</valign>
+          <format>{%Author:8|Title:f%}{. %Title%}{. &lt;b&gt;%JournalName%&lt;/b&gt;}{, %City%}{, ano %Volume%}{, n. %Issue%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+        </column>
+        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
+      </source>
+      <source type="ArticleInAPeriodical">
+        <column id="1">
+          <halign>left</halign>
+          <valign>top</valign>
+          <format>{%Author:8|Title:f%}{. %Title%}{. &lt;b&gt;%PeriodicalTitle%&lt;/b&gt;}{, %City%}{, v. %Volume%}{, n. %Issue%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ DOI: %DOI:l%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+        </column>
+        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
       <source type="ConferenceProceedings">
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}}{. %ConferenceName%}{. %City|"[S.l.]"%: %Publisher|"[s.n.]"%}{. {{%Day% }%Month:s% }%Year%{%YearSuffix%}}{. %Pages:p. :p. %}.{ %Comments%.}</format>
+          <format>{%Author:8|Title:f%}{. %Title:mr%{: %Title:s%}}{. &lt;i&gt;In:&lt;/i&gt; %ConferenceName:mur%, {%Volume%.,} %Year:r%, %City:r%}{. &lt;b&gt;%ConferenceName:s%&lt;/b&gt; […]}{. %City|"[S.l.]"%{: %Publisher%}}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}{. %Pages:p. :p. %}.{ ISSN %StandardNumber%.}{ DOI: %DOI:l%.}{ Disponível em: %URL:l%}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
+      <source type="Report">   
+        <column id="1">
+          <halign>left</halign>
+          <valign>top</valign>
+          <format>{%Author:8|Title%.}{ &lt;b&gt;%Title%&lt;/b&gt;.}{ %Year:r%{%YearSuffix:r%}.}{ %Pages% f.}{ %ThesisType%} – {%Department%, }{%Institution%}{, %City|"[S.l.]"%}{, %Year:r%{%YearSuffix:r%}.}{ DOI: %DOI:l%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+        </column>
+        <sortkey>{%Author:2|Title%} {%Year%} {%Title%}</sortkey>
+      </source>
+      <source type="InternetSite">
+        <column id="1">
+          <halign>left</halign>
+          <valign>top</valign>
+          <format>{%Author:8|Title:f%}{. &lt;b&gt;%InternetSiteTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %InternetSiteTitle:s%}}{. %Title%}{, %City%}{, p. %Pages::%}{. {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ %Comments%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}</format>
+        </column>
+        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
+      </source>
+
+      <source type="Art">
+        <column id="1">
+          <halign>left</halign>
+          <valign>top</valign>
+          <format>{%Artist:8|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ %City%{: %Publisher%},}{ %Year%{%YearSuffix%}.}{ %Medium%.}{ %Pages::% p.}{ ISBN %StandardNumber%.}{ DOI: %DOI:l%.}{ %Institution%.}{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+        </column>
+        <sortkey>{%Artist:8|Title:f%} {%Year%} {%Title:a%}</sortkey>
+      </source>
+
       <source type="Film">
         <column id="1">
           <halign>left</halign>
@@ -246,38 +578,15 @@
         </column>
         <sortkey>{%Title:a%} {%Year%}</sortkey>
       </source>
-      <source type="InternetSite">
-        <column id="1">
-          <halign>left</halign>
-          <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%InternetSiteTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %InternetSiteTitle:s%}}{, %City%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
-        </column>
-        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
-      </source>
-      <source type="JournalArticle">
-        <column id="1">
-          <halign>left</halign>
-          <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%JournalName%&lt;/b&gt;}{, %City%}{, v. %Volume%}{, n. %Issue%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
-        </column>
-        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
-      </source>
       <source type="Patent">
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Inventor:2|Title:f%}{. &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}}{. %PatentNumber%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Inventor:2|Title:f%}{. &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}}{. %PatentNumber%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ Disponível em: %URL:l%.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Inventor:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
-      <source type="Report">
-        <column id="1">
-          <halign>left</halign>
-          <valign>top</valign>
-          <format>{%Author:2|Title%.}{ &lt;b&gt;%Title%&lt;/b&gt;.}{ %Institution|Department%.}{ %City|"[S.l.]"%}{, %Pages:p. :p. %}{. %Year%{%YearSuffix%}}{. (%StandardNumber%)}.{ %Comments%.}</format>
-        </column>
-        <sortkey>{%Author:2|Title%} {%Year%} {%Title%}</sortkey>
-      </source>
+      
       <source type="SoundRecording">
         <column id="1">
           <halign>left</halign>
@@ -294,15 +603,8 @@
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title%}</sortkey>
       </source>
-      <source type="Thesis">
-        <column id="1">
-          <halign>left</halign>
-          <valign>top</valign>
-          <format>{%Author:2|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ %Year:r%{%YearSuffix:r%}.}{ %Pages%p.}{ %ThesisType%.}{ %Department%{, %Institution%{, %City%}}}{ %Institution%{, %City%}}{ %City%}{, %Year%{%YearSuffix%}}.{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
-        </column>
-        <sortkey>{%Author:2|Title:a%} {%Year%} {%Title%}</sortkey>
-      </source>
     </bibliography>
+
     <namelists>
       <list name="citation" id="1">
         <single_prefix></single_prefix>
@@ -310,12 +612,12 @@
         <corporate>{%Corporate:u%}</corporate>
         <first_person>{%Last:u%}</first_person>
         <other_persons>{%Last:u%}</other_persons>
-        <separator_between_if_two> e </separator_between_if_two>
-        <separator_between_if_more_than_two>, </separator_between_if_more_than_two>
-        <separator_before_last> e </separator_before_last>
+        <separator_between_if_two>; </separator_between_if_two>
+        <separator_between_if_more_than_two>; </separator_between_if_more_than_two>
+        <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
-        <number_of_persons_to_display_if_more_than_max>2</number_of_persons_to_display_if_more_than_max>
-        <overflow>, &lt;i&gt;et al.&lt;/i&gt;</overflow>
+        <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
+        <overflow> et al.</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
       </list>
@@ -330,7 +632,7 @@
         <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
-        <overflow> et al.</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
       </list>
@@ -345,7 +647,7 @@
         <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
-        <overflow> et al.</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix> (Ed.)</single_suffix>
         <multi_suffix> (Eds.)</multi_suffix>
       </list>
@@ -360,7 +662,7 @@
         <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
-        <overflow>, et al.</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
       </list>
@@ -370,12 +672,12 @@
         <corporate>{%Corporate%}</corporate>
         <first_person>{%First|Middle% }{%Middle% }{%Last%}</first_person>
         <other_persons>{%First|Middle% }{%Middle% }{%Last%}</other_persons>
-        <separator_between_if_two> e </separator_between_if_two>
+        <separator_between_if_two>; </separator_between_if_two>
         <separator_between_if_more_than_two>; </separator_between_if_more_than_two>
-        <separator_before_last> e </separator_before_last>
+        <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>2</number_of_persons_to_display_if_more_than_max>
-        <overflow>, &lt;i&gt;et al.&lt;/i&gt;</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
       </list>
@@ -390,7 +692,7 @@
         <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
-        <overflow> et al.</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix> (Comp.)</single_suffix>
         <multi_suffix> (Comps.)</multi_suffix>
       </list>
@@ -400,12 +702,27 @@
         <corporate>{%Corporate%}</corporate>
         <first_person>{%First|Middle% }{%Middle% }{%Last%}</first_person>
         <other_persons>{%First|Middle% }{%Middle% }{%Last%}</other_persons>
-        <separator_between_if_two> e </separator_between_if_two>
+        <separator_between_if_two>; </separator_between_if_two>
         <separator_between_if_more_than_two>; </separator_between_if_more_than_two>
-        <separator_before_last> e </separator_before_last>
+        <separator_before_last>; </separator_before_last>
         <max_number_of_persons_to_display>10</max_number_of_persons_to_display>
         <number_of_persons_to_display_if_more_than_max>10</number_of_persons_to_display_if_more_than_max>
-        <overflow> e outros</overflow>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
+        <single_suffix></single_suffix>
+        <multi_suffix></multi_suffix>
+      </list>
+      <list name="authorAll" id="8">
+        <single_prefix></single_prefix>
+        <multi_prefix></multi_prefix>
+        <corporate>{%Corporate:u%}</corporate>
+        <first_person>{%Last:u%}{, %First:adpsu|Middle:adpsu%{ %Middle:adpsu%}}</first_person>
+        <other_persons>{%Last:u%}{, %First:adpsu|Middle:adpsu%{ %Middle:adpsu%}}</other_persons>
+        <separator_between_if_two>; </separator_between_if_two>
+        <separator_between_if_more_than_two>; </separator_between_if_more_than_two>
+        <separator_before_last>; </separator_before_last>
+        <max_number_of_persons_to_display>10</max_number_of_persons_to_display>
+        <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
+        <overflow> &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
       </list>
@@ -428,25 +745,25 @@
     </strings>
     <extensions>
       <source type="ArticleInAPeriodical">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Title%}{. %Year%}</yearsuffix>
       </source>
       <source type="Book">
-        <yearsuffix>{%Author:1|Editor:1|Compiler:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Editor:1|Compiler:1|Title%}{. %Year%}</yearsuffix>
       </source>
       <source type="BookSection">
         <yearsuffix>{%Author:1|BookAuthor:1|Title%}{, %Year%}</yearsuffix>
       </source>
       <source type="ConferenceProceedings">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Title%}{. %Year%}</yearsuffix>
       </source>
       <source type="Film">
         <yearsuffix>{%Title%}{, %Year%}</yearsuffix>
       </source>
       <source type="InternetSite">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Title%}{. %Year%}</yearsuffix>
       </source>
       <source type="JournalArticle">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Title%}{. %Year%}</yearsuffix>
       </source>
       <source type="Patent">
         <yearsuffix>{%Inventor:1|Title%}{, %Year%}</yearsuffix>
@@ -458,17 +775,18 @@
         <yearsuffix>{%Composer:1|Performer:1|Title|AlbumTitle%}{, %Year%}</yearsuffix>
       </source>
       <source type="Standard">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
-      </source>
-      <source type="Thesis">
-        <yearsuffix>{%Author:1|Title%}{, %Year%}</yearsuffix>
+        <yearsuffix>{%Author:1|Title%}{. %Year%}</yearsuffix>
       </source>
     </extensions>
     <overrides>
-      <titles>
+      <params for="Title">
         <delimeter>:</delimeter>
-        <articles>-A-THE-AN-OS-</articles>
-      </titles>
+        <articles>-DOS-DAS-NOS-NAS-UNS-UMAS-THE-A-AN-</articles>
+      </params>
+      <params for="ConferenceName">
+        <delimeter>:</delimeter>
+        <articles>-DOS-DAS-NOS-NAS-UNS-UMAS-THE-A-AN-</articles>
+      </params>
     </overrides>
   </xsl:variable>
 
@@ -491,15 +809,7 @@
 
       <!-- Sets a version number in Word 2013. -->
       <xsl:when test="b:XslVersion">
-        <xsl:choose>
-          <xsl:when test="msxsl:node-set($data)/general/version2013">
-            <xsl:value-of select="msxsl:node-set($data)/general/version2013"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <!-- Fallback method : use a dummy version number of 1. -->
-            <xsl:text>1</xsl:text>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:value-of select="msxsl:node-set($data)/general/version"/>
       </xsl:when>
 
       <!-- Set the name of the style in Word 2013. -->
@@ -1355,6 +1665,13 @@
                       <xsl:with-param name="options" select="$options"/>
                     </xsl:call-template>
                   </xsl:when>
+                  <!-- Handle DOIs. -->
+                  <xsl:when test="$name = 'DOI' and string($source/b:DOI)">
+                    <xsl:call-template name="format-doi">
+                      <xsl:with-param name="doi" select="$source/b:DOI"/>
+                      <xsl:with-param name="options" select="$options"/>
+                    </xsl:call-template>
+                  </xsl:when>
                   <!-- Handle years and years accessed. -->
                   <xsl:when test="starts-with($name, 'Year') and string($source/*[local-name() = $name])">
                     <xsl:call-template name="format-year">
@@ -1378,8 +1695,8 @@
                         <xsl:with-param name="options" select="$options"/>
                         <xsl:with-param name="delimeter">
                           <xsl:choose>
-                            <xsl:when test="string-length(msxsl:node-set($data)/overrides/titles/delimeter) > 0">
-                              <xsl:value-of select="msxsl:node-set($data)/overrides/titles/delimeter"/>
+                            <xsl:when test="string-length(msxsl:node-set($data)/overrides/params[@for = $name]/delimeter) > 0">
+                              <xsl:value-of select="msxsl:node-set($data)/overrides/params[@for = $name]/delimeter"/>
                             </xsl:when>
                             <xsl:otherwise>
                               <xsl:text>:</xsl:text>
@@ -1388,8 +1705,8 @@
                         </xsl:with-param>
                         <xsl:with-param name="articles">
                           <xsl:choose>
-                            <xsl:when test="string-length(msxsl:node-set($data)/overrides/titles/articles) > 0">
-                              <xsl:value-of select="msxsl:node-set($data)/overrides/titles/articles"/>
+                            <xsl:when test="string-length(msxsl:node-set($data)/overrides/params[@for = $name]/articles) > 0">
+                              <xsl:value-of select="msxsl:node-set($data)/overrides/params[@for = $name]/articles"/>
                             </xsl:when>
                             <xsl:otherwise>
                               <xsl:text>-A-AN-THE-</xsl:text>
@@ -1405,6 +1722,24 @@
                       </xsl:when>
                       <xsl:otherwise>
                         <xsl:value-of select="$title"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:when>
+                  <!-- Handle ConferenceName. -->
+                  <xsl:when test="$name = 'ConferenceName' and string($source/b:ConferenceName)">
+                    <xsl:variable name="conference">
+                      <xsl:call-template name="format-title">
+                        <xsl:with-param name="title" select="$source/*[local-name() = $name]"/>
+                        <xsl:with-param name="options" select="$options"/>
+                        <xsl:with-param name="delimeter" select="msxsl:node-set($data)/overrides/params[@for = $name]/delimeter"/>
+                      </xsl:call-template>
+                    </xsl:variable>
+                    <xsl:choose>
+                      <xsl:when test="string-length($conference) = 0">
+                        <xsl:text>%empty%</xsl:text>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="$conference"/>
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:when>
@@ -2073,6 +2408,8 @@
         <!-- Count the number of b:Person elements in the node-set. -->
         <xsl:variable name="numPersons" select="count($contributors/b:NameList/b:Person)" />
 
+        <xsl:variable name="hasEtal" select="$contributors/b:NameList/b:Person[last()]/b:Last/text() = 'al.'" />
+
         <xsl:if test="$numPersons > 0">
           <!-- Calculate the number of b:Person elements to display. -->
           <xsl:variable name="numDisplay">
@@ -2111,6 +2448,7 @@
                   <xsl:with-param name="format" select="$params/first_person" />
                 </xsl:call-template>
               </xsl:when>
+              <xsl:when test="(position() = $numDisplay) and $hasEtal"/>
               <xsl:when test="position() = 2 and $numPersons = 2">
                 <xsl:value-of select="$params/separator_between_if_two"/>
                 <xsl:call-template name="format-person">
@@ -2137,6 +2475,10 @@
 
           <!-- Handle overflow. -->
           <xsl:if test="$numPersons > $numDisplay">
+            <xsl:value-of select="$params/overflow"/>
+          </xsl:if>
+
+          <xsl:if test="$hasEtal">
             <xsl:value-of select="$params/overflow"/>
           </xsl:if>
 
@@ -2299,6 +2641,49 @@
         <!-- Don't manipulate URL for display. -->
         <xsl:otherwise>
           <xsl:value-of select="$url"/>
+        </xsl:otherwise>
+      </xsl:choose>
+
+      <!-- Close tag. -->
+      <xsl:if test="contains($options, 'l')">
+        <xsl:text>&lt;/a&gt;</xsl:text>
+      </xsl:if>
+    </xsl:if>
+
+  </xsl:template>
+
+   <!-- Formats a DOI. -->
+  <xsl:template name="format-doi">
+    <!-- DOI to format. -->
+    <xsl:param name="doi"/>
+    <!-- Options (l: display as clickable link, s: split doi over multiple lines) -->
+    <xsl:param name="options"/>
+
+    <xsl:if test="string-length($doi) > 0">
+      <!-- Open tag. -->
+      <xsl:if test="contains($options, 'l')">
+        <xsl:text>&lt;a href="https://doi.org/</xsl:text>
+        <xsl:value-of select="$doi"/>
+        <xsl:text>"&gt;</xsl:text>
+      </xsl:if>
+
+      <!-- Hack in case <DOI> is requested and not as link. -->
+      <xsl:if test="not(contains($options, 'l'))">
+        <xsl:text>&lt;span/&gt;</xsl:text>
+      </xsl:if>
+
+      <!-- Display DOI. -->
+      <xsl:choose>
+        <!-- Manipulate DOI for display. -->
+        <xsl:when test="contains($options, 's')">
+          <xsl:call-template name="add-zwsp">
+            <xsl:with-param name="string" select="$doi"/>
+            <xsl:with-param name="afterChars" select="'/'"/>
+          </xsl:call-template>
+        </xsl:when>
+        <!-- Don't manipulate DOI for display. -->
+        <xsl:otherwise>
+          <xsl:value-of select="$doi"/>
         </xsl:otherwise>
       </xsl:choose>
 
@@ -2628,6 +3013,43 @@
 
   </xsl:template>
 
+  <!-- convert a roman to integer. 
+  <xsl:template name="roman-to-number">
+    
+    <xsl:param name="roman"/>
+
+    <xsl:param name="value" select="0"/>
+
+    <xsl:variable name="len" select="string-length($roman)"/>
+    <xsl:choose>
+      <xsl:when test="not($len)">
+        <xsl:value-of select="$value"/>
+      </xsl:when>
+      <xsl:when test="$len = 1">
+        <xsl:value-of select="$value + $ckbk:roman-nums[. = $roman]/@value"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="roman-num" select="$ckbk:roman-nums[. = substring($roman, 1, 1)]"/>
+        <xsl:choose>
+          <xsl:when test="$roman-num/following-sibling::ckbk:roman =
+            substring($roman, 2, 1)">
+            <xsl:call-template name="ckbk:roman-to-number-impl">
+              <xsl:with-param name="roman" select="substring($roman,2,$len - 1)"/>
+              <xsl:with-param name="value" select="$value - $roman-num/@value"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="ckbk:roman-to-number-impl">
+              <xsl:with-param name="roman" select="substring($roman,2,$len - 1)"/>
+              <xsl:with-param name="value" select="$value + $roman-num/@value"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+
+  </xsl:template>-->
+
   <!-- Format ordinal. -->
   <xsl:template name="format-ordinal">
     <!-- A number to convert to an ordinal. -->
@@ -2902,6 +3324,18 @@
     <!-- Options string. (u = uppercase, l = lowercase, a = put xxxwords at the end, m = main title, s = subtitle, f = first word uppercase) -->
     <xsl:param name="options"/>
 
+    <!-- Capitalize the possible start words to put at the end. -->
+    <xsl:variable name="firstWords">
+      <xsl:call-template name="upper-case">
+        <xsl:with-param name="string" select="$articles"/>
+      </xsl:call-template> 
+    </xsl:variable>
+    <xsl:variable name="firstWord">
+      <xsl:call-template name="upper-case">
+        <xsl:with-param name="string" select="substring-before($title, ' ')"/>
+      </xsl:call-template> 
+    </xsl:variable>
+
     <!-- Select the requested title part (main, sub, or full). -->
     <xsl:variable name="part">
       <xsl:choose>
@@ -2947,13 +3381,6 @@
               <xsl:with-param name="string" select="normalize-space($temp1)"/>
             </xsl:call-template>
             <xsl:text>-</xsl:text>
-          </xsl:variable>
-
-          <!-- Capitalize the possible start words to put at the end. -->
-          <xsl:variable name="firstWords">
-            <xsl:call-template name="upper-case">
-              <xsl:with-param name="string" select="$articles"/>
-            </xsl:call-template>
           </xsl:variable>
 
           <!-- Check if it is used. -->
@@ -3004,8 +3431,47 @@
           </xsl:call-template>
           <!-- Space. -->
           <xsl:text> </xsl:text>
+          <xsl:if test="contains($articles, $firstWord)">
+            <xsl:text> </xsl:text>
+            <xsl:call-template name="upper-case">
+              <xsl:with-param name="string">
+                <xsl:call-template name="substring-before-ex">
+                  <xsl:with-param name="string" select="substring-after($sort, ' ')"/>
+                  <xsl:with-param name="delimeter" select="' '"/>
+                </xsl:call-template>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:if>
+          <!-- Space. -->
+          <xsl:text> </xsl:text>
           <!-- Other words. -->
-          <xsl:value-of select="substring-after($part, ' ')"/>
+          <xsl:value-of select="substring-after(substring-after($part, ' '), ' ')"/>
+        </xsl:when>
+
+        <xsl:when test="contains($options, 'F')">
+          <!-- Include first word -->
+          <xsl:call-template name="upper-case">
+            <xsl:with-param name="string">
+              <xsl:call-template name="substring-before-ex">
+                <xsl:with-param name="string" select="$sort"/>
+                <xsl:with-param name="delimeter" select="' '"/>
+              </xsl:call-template>
+            </xsl:with-param>
+          </xsl:call-template>
+          <!-- If first Word is an article, include the second -->
+          <xsl:if test="contains($articles, $firstWord)">
+            <xsl:text> </xsl:text>
+            <xsl:call-template name="upper-case">
+              <xsl:with-param name="string">
+                <xsl:call-template name="substring-before-ex">
+                  <xsl:with-param name="string" select="substring-after($sort, ' ')"/>
+                  <xsl:with-param name="delimeter" select="' '"/>
+                </xsl:call-template>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:if>
+
+          <xsl:text>…</xsl:text>
         </xsl:when>
         <!-- Do not adjust casing. -->
         <xsl:otherwise>
@@ -3156,10 +3622,10 @@
 
 
   <!-- The set of lower case characters used to do case conversions. -->
-  <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz&#224;&#225;&#226;&#227;&#228;&#229;&#230;&#231;&#232;&#233;&#234;&#235;&#236;&#237;&#238;&#239;&#241;&#242;&#243;&#244;&#245;&#246;&#249;&#250;&#251;&#252;'"/>
+  <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz&#224;&#225;&#226;&#227;&#228;&#229;&#230;&#231;&#232;&#233;&#234;&#235;&#236;&#237;&#238;&#239;&#241;&#242;&#243;&#244;&#245;&#246;&#249;&#250;&#251;&#252;&#305;'"/>
 
   <!-- The set of upper case characters used to do case conversions. -->
-  <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ&#192;&#193;&#194;&#195;&#196;&#197;&#198;&#199;&#200;&#201;&#202;&#203;&#204;&#205;&#206;&#207;&#209;&#210;&#211;&#212;&#213;&#214;&#217;&#218;&#219;&#220;'"/>
+  <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ&#192;&#193;&#194;&#195;&#196;&#197;&#198;&#199;&#200;&#201;&#202;&#203;&#204;&#205;&#206;&#207;&#209;&#210;&#211;&#212;&#213;&#214;&#217;&#218;&#219;&#220;&#73;'"/>
 
   <!-- The set of punctuation characters used as word delimeters in a string. -->
   <xsl:variable name="punctuation" select="'&#9;&#13;&#160;&#32;.,:;!?&#34;&#8216;&#8217;&#8218;&#8220;&#8221;&#8222;&#171;&#187;()[]&lt;&gt;{}'"/>
