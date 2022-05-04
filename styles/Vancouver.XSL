@@ -290,7 +290,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
@@ -303,7 +303,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
