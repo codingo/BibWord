@@ -290,7 +290,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
@@ -303,7 +303,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
@@ -927,8 +927,8 @@
 
         <tr>
           <xsl:call-template name="format-bibliography-table-column">
-            <xsl:with-param name="columnId" select="1"/>
-            <xsl:with-param name="source" select="."/>
+            <xsl:with-param name="columnId" select=" 1 "/>
+            <xsl:with-param name="source" select=" . "/>
           </xsl:call-template>
         </tr>
 
@@ -1034,7 +1034,7 @@
     <xsl:if test="$params/bibliography/columns > $columnId">
       <xsl:call-template name="format-bibliography-table-column">
         <xsl:with-param name="source" select="$source"/>
-        <xsl:with-param name="columnId" select="$columnId + 1"/>
+        <xsl:with-param name="columnId" select="$columnId + 1 "/>
       </xsl:call-template>
     </xsl:if>
 
