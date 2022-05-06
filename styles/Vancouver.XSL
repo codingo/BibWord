@@ -1006,7 +1006,7 @@
       </xsl:choose>
     </xsl:variable>
 
-    <td align="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/halign}" valign="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/valign}">
+    <td nowrap align="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/halign}" valign="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/valign}">
       <p class="MsoBibliography">
 
         <xsl:variable name="columnX">
