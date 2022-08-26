@@ -151,8 +151,8 @@
       </source>
     </importantfields>
     <citation>
-      <openbracket>(</openbracket>
-      <closebracket>)</closebracket>
+      <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
       <separator>,</separator>
       <source type="Book">
         <format>{%RefOrder%}</format>
@@ -192,6 +192,8 @@
       <columns>2</columns>
       <source type="Book">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -218,6 +220,8 @@
       </source>
       <source type="JournalArticle">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -244,6 +248,8 @@
       </source>
       <source type="ConferenceProceedings">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>   
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -257,6 +263,8 @@
       </source>
       <source type="Report">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -270,6 +278,8 @@
       </source>
       <source type="InternetSite">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -283,6 +293,8 @@
       </source>
       <source type="DocumentFromInternetSite">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -322,6 +334,8 @@
       </source>
       <source type="Misc">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -335,6 +349,8 @@
       </source>
       <source type="Thesis">
         <column id="1">
+                <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
