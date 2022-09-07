@@ -151,7 +151,8 @@
       </source>
     </importantfields>
     <citation>
-
+      <openbracket>(</openbracket>
+      <closebracket>)</closebracket>
       <separator>; </separator>
       <noauthor>-Artist-Author-BookAuthor-Compiler-Composer-Conductor-Counsel-Director-Editor-Interviewee-Interviewer-Inventor-Performer-ProducerName-Translator-Writer-</noauthor>
       <notitle>-Title-AlbumTitle-BookTitle-BroadcastTitle-InternetSiteTitle-PeriodicalTitle-PublicationTitle-ShortTitle-</notitle>
@@ -210,7 +211,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%PeriodicalTitle%&lt;/b&gt;}{, %City%}{, %Volume%}{, n. %Issue%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ %Pages::%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%PeriodicalTitle%&lt;/b&gt;}{, %City%}{, %Volume%}{, n. %Issue%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ %Pages::%.}{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -218,7 +219,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Editor:3|Compiler:6|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ %Pages::% p.}.{ ISBN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|Editor:3|Compiler:6|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ %Pages::% p.}.{ ISBN %StandardNumber%.}{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Editor:3|Compiler:6|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -226,7 +227,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|BookAuthor:2|Title:f%.}{ %Title%.}{ In: {%BookAuthor:4|Editor:4|"______"%} &lt;b&gt;%BookTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %BookTitle:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ Cap. %ChapterNumber%,}{ %Pages:p. :p. %}.{ ISBN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|BookAuthor:2|Title:f%.}{ %Title%.}{ In: {%BookAuthor:4|Editor:4|"______"%} &lt;b&gt;%BookTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %BookTitle:s%}.}{ Tradução de %Translator:5%.}{ %Edition%. ed.}{ %City|"[S.l.]"%: %Publisher|"[s.n.]"%,}{ v. %Volume%,}{ %Year%{%YearSuffix%}.}{ Cap. %ChapterNumber%,}{ %Pages:p. :p. %}.{ ISBN %StandardNumber%.}{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|BookAuthor:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -250,7 +251,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%InternetSiteTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %InternetSiteTitle:s%}}{, %City%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%InternetSiteTitle:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %InternetSiteTitle:s%}}{, %City%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -258,7 +259,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%JournalName%&lt;/b&gt;}{, %City%}{, v. %Volume%}{, n. %Issue%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|Title:f%}{. %Title%}{. &lt;b&gt;%JournalName%&lt;/b&gt;}{, %City%}{, v. %Volume%}{, n. %Issue%}{, p. %Pages::%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ ISSN %StandardNumber%.}{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -266,7 +267,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Inventor:2|Title:f%}{. &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}}{. %PatentNumber%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Inventor:2|Title:f%}{. &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}}{. %PatentNumber%}{, {{%Day% }%Month:s% }%Year%{%YearSuffix%}}.{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Inventor:2|Title:a%} {%Year%} {%Title:a%}</sortkey>
       </source>
@@ -298,7 +299,7 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:2|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ %Year:r%{%YearSuffix:r%}.}{ %Pages%p.}{ %ThesisType%.}{ %Department%{, %Institution%{, %City%}}}{ %Institution%{, %City%}}{ %City%}{, %Year%{%YearSuffix%}}.{ Disponivel em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
+          <format>{%Author:2|Title:f%.}{ &lt;b&gt;%Title:mr%&lt;/b&gt;{&lt;b&gt;:&lt;/b&gt; %Title:s%}.}{ %Year:r%{%YearSuffix:r%}.}{ %Pages%p.}{ %ThesisType%.}{ %Department%{, %Institution%{, %City%}}}{ %Institution%{, %City%}}{ %City%}{, %Year%{%YearSuffix%}}.{ Disponível em: &lt;%URL%&gt;.}{ Acesso em: {{%DayAccessed% }%MonthAccessed:s% }%YearAccessed%.}{ %Comments%.}</format>
         </column>
         <sortkey>{%Author:2|Title:a%} {%Year%} {%Title%}</sortkey>
       </source>
@@ -314,7 +315,7 @@
         <separator_between_if_more_than_two>, </separator_between_if_more_than_two>
         <separator_before_last> e </separator_before_last>
         <max_number_of_persons_to_display>3</max_number_of_persons_to_display>
-        <number_of_persons_to_display_if_more_than_max>2</number_of_persons_to_display_if_more_than_max>
+        <number_of_persons_to_display_if_more_than_max>1</number_of_persons_to_display_if_more_than_max>
         <overflow>, &lt;i&gt;et al.&lt;/i&gt;</overflow>
         <single_suffix></single_suffix>
         <multi_suffix></multi_suffix>
