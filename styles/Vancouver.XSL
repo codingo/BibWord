@@ -151,8 +151,8 @@
       </source>
     </importantfields>
     <citation>
-      <openbracket>(</openbracket>
-      <closebracket>)</closebracket>
+      <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
       <separator>,</separator>
       <source type="Book">
         <format>{%RefOrder%}</format>
@@ -192,6 +192,8 @@
       <columns>2</columns>
       <source type="Book">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -218,6 +220,8 @@
       </source>
       <source type="JournalArticle">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -244,6 +248,8 @@
       </source>
       <source type="ConferenceProceedings">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket> 
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -257,6 +263,8 @@
       </source>
       <source type="Report">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -270,6 +278,8 @@
       </source>
       <source type="InternetSite">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -283,6 +293,8 @@
       </source>
       <source type="DocumentFromInternetSite">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -290,7 +302,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%InternetSiteTitle|Title%. }[Online].{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
@@ -303,7 +315,7 @@
         <column id="2">
           <halign>left</halign>
           <valign>top</valign>
-          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
+          <format>{%Author:1%. }{%Title% }{[%Medium%]}.{ %City%}{: %Publisher%}{; %Year% }{ [cited %YearAccessed%{ %MonthAccessed%{ %DayAccessed%}}]}{ [%Comments%]}.{ Available from: %URL:l%.}</format>
         </column>
         <sortkey></sortkey>
       </source>
@@ -322,6 +334,8 @@
       </source>
       <source type="Misc">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -335,6 +349,8 @@
       </source>
       <source type="Thesis">
         <column id="1">
+             <openbracket>[</openbracket>
+      <closebracket>]</closebracket>
           <halign>right</halign>
           <valign>top</valign>
           <format>{%RefOrder%.}</format>
@@ -927,8 +943,8 @@
 
         <tr>
           <xsl:call-template name="format-bibliography-table-column">
-            <xsl:with-param name="columnId" select="1"/>
-            <xsl:with-param name="source" select="."/>
+            <xsl:with-param name="columnId" select=" 1 "/>
+            <xsl:with-param name="source" select=" . "/>
           </xsl:call-template>
         </tr>
 
@@ -1006,7 +1022,7 @@
       </xsl:choose>
     </xsl:variable>
 
-    <td align="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/halign}" valign="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/valign}">
+    <td align="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/halign=left}" style="white-space:nowrap; width:45px; vertical-align:top;" valign="{$params/bibliography/source[@type = $type]/column[@id = $columnId]/valign}">
       <p class="MsoBibliography">
 
         <xsl:variable name="columnX">
@@ -1034,7 +1050,7 @@
     <xsl:if test="$params/bibliography/columns > $columnId">
       <xsl:call-template name="format-bibliography-table-column">
         <xsl:with-param name="source" select="$source"/>
-        <xsl:with-param name="columnId" select="$columnId + 1"/>
+        <xsl:with-param name="columnId" select="$columnId + 1 "/>
       </xsl:call-template>
     </xsl:if>
 
